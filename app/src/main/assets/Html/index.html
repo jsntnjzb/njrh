@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>主页</title>
+		<script src="../js/zepto.js"></script>
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+		     var js_bridge;
+			 Zepto(function($){
+			      connectWebViewJavascriptBridge(function(bridge) {
+             			js_bridge = bridge;
+             			//set default messageHandler
+						 js_bridge.init(function(message, responseCallback) {});
+<!--						 js_bridge.registerHandler("login",function(data,responseCallback) {-->
+<!--						 });-->
+            	   });
+
+				  $("#btn_login").bind("touchend",function(){
+				     var pwd = $.trim($("#txt_password").val());
+				     js_bridge.callHandler('login',pwd,function(responseData) {});
+         		  });
+			 });
+		</script>
+	</head>
+	<body>
+	<main>
+		密码： <input id="txt_password" type="text"/>
+		<button id="btn_login">登陆</button>
+	</main>
+	</body>
+</html>
