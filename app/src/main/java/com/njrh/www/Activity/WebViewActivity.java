@@ -165,7 +165,7 @@ public abstract class WebViewActivity extends BaseActivity {
         /**
          * 用WebView显示图片，可使用这个参数 设置网页布局类型：
          * 1、LayoutAlgorithm.NARROW_COLUMNS ：适应内容大小
-         * 2、LayoutAlgorithm.SINGLE_COLUMN:适应屏幕，内容将自动缩放
+         * equipment_statistics、LayoutAlgorithm.SINGLE_COLUMN:适应屏幕，内容将自动缩放
          */
         settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
     }
