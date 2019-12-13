@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <size
+                android:width="50dp"
+                android:height="1dp"/>
+        </shape>
+    </item>
+
+    <!-- This is the line -->
+    <!-- left 和right是左右边距 -->
+<!--    <item-->
+<!--        android:left="1dp"-->
+<!--        android:right="1dp">-->
+<!--        <shape>-->
+<!--            <solid android:color="@color/colorPrimaryDark" />-->
+<!--        </shape>-->
+<!--    </item>-->
+    <!--bottom是横线高度 -->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <solid android:color="@android:color/transparent" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+
+    <item android:bottom="20dp">
+        <rotate android:fromDegrees="225">
+            <shape>
+                <solid android:color="@android:color/white" />
+<!--                <corners-->
+<!--                    android:bottomLeftRadius="0dp"-->
+<!--                    android:bottomRightRadius="0dp"-->
+<!--                    android:radius="1dp" />-->
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:top="20dp">
+        <rotate android:fromDegrees="-225">
+            <shape>
+                <solid android:color="@android:color/white" />
+<!--                <corners-->
+<!--                    android:radius="1dp"-->
+<!--                    android:topLeftRadius="0dp"-->
+<!--                    android:topRightRadius="0dp" />-->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

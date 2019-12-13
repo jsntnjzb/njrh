@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/root_view"
     tools:context=".Activity.MainActivity">
-    <com.njrh.www.widget.MyWebView
+    <com.njrh.ew.widget.MyWebView
         android:id="@+id/bridge_webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.njrh.www">
+    package="com.njrhzn.ew">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,15 +17,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.EquipmentConfigurationActivity"></activity>
-        <activity android:name=".Activity.AdminMenuActivity" />
-        <activity android:name=".Activity.LoginActivity">
+        <activity android:name=".Activity.ThanksActivity"></activity>
+        <activity android:name=".Activity.PayedSuccessfulActivity" />
+        <activity android:name=".Activity.SelectPaymentMethodActivity" />
+        <activity android:name=".Activity.EntryToOrderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.Equipment_sales_statisticsActivity" />
+        <activity android:name=".Activity.EquipmentConfigurationActivity" />
+        <activity android:name=".Activity.AdminMenuActivity" />
+        <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity" />
     </application>
 
