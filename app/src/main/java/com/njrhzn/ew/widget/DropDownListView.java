@@ -1,8 +1,8 @@
 package com.njrhzn.ew.widget;
 
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +23,7 @@ public class DropDownListView extends LinearLayout {
     private ImageButton img_btn_arrow;
     private PopupWindow popupWindow = null;
     private ArrayList<String> dataList = null;
+    private int popWindow_width = 0;
     private View mView;
 
     public DropDownListView(Context context) {
@@ -42,10 +43,12 @@ public class DropDownListView extends LinearLayout {
     private void initView(){
         LayoutInflater layoutInflater;
         layoutInflater =  (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view  = layoutInflater.inflate(R.layout.dropdownlist_view, this,true);
-        editText= (TextView)view.findViewById(R.id.text);
-        img_btn_arrow = (ImageButton) view.findViewById(R.id.img_btn_arrow);
+        mView  = layoutInflater.inflate(R.layout.dropdownlist_view, this,true);
+        editText= mView.findViewById(R.id.text);
+        img_btn_arrow = mView.findViewById(R.id.img_btn_arrow);
+
         this.setOnClickListener(new OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -78,6 +81,12 @@ public class DropDownListView extends LinearLayout {
             dataList.add("原味冷豆浆");
         }
         editText.setText(dataList.get(0));
+        if(popWindow_width==0){
+            int spec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+            mView.measure(spec,spec);
+            popWindow_width = mView.getMeasuredWidth();
+            Log.d("DropDownListView","popWindow_width"+popWindow_width);
+        }
     }
 
     /**
@@ -88,14 +97,15 @@ public class DropDownListView extends LinearLayout {
         LayoutInflater layoutInflater;
         layoutInflater =  (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contentView  = layoutInflater.inflate(R.layout.dropdownlist_popupwindow, null,false);
-        ListView listView = (ListView)contentView.findViewById(R.id.listView);
+        ListView listView = contentView.findViewById(R.id.listView);
         listView.setAdapter(new DropDownListAdapter(getContext(), dataList));
-        popupWindow = new PopupWindow(contentView,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-        ColorDrawable colorDrawable = new ColorDrawable();
-        popupWindow.setBackgroundDrawable(colorDrawable);
+        popupWindow = new PopupWindow(contentView,popWindow_width,LayoutParams.WRAP_CONTENT);
+        popupWindow.setTouchable(true);
         popupWindow.setOutsideTouchable(true);
+//        popupWindow.setBackgroundDrawable(new ColorDrawable(Color.alpha()));
+        popupWindow.setContentView(contentView);
         popupWindow.showAsDropDown(this);
-        popupWindow.showAtLocation(this, Gravity.BOTTOM,50,0);
+        popupWindow.showAtLocation(this, Gravity.BOTTOM,0,0);
     }
 
 

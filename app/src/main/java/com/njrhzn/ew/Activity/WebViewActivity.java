@@ -25,8 +25,8 @@ import androidx.annotation.Nullable;
 
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.BridgeWebViewClient;
-import com.njrh.ew.Handler.IndexHandler;
 import com.njrhzn.ew.App.AppManager;
+import com.njrhzn.ew.Handler.IndexHandler;
 import com.njrhzn.ew.R;
 
 import java.lang.ref.WeakReference;

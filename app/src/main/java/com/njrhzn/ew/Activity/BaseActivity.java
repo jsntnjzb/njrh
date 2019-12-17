@@ -22,6 +22,7 @@ public abstract class BaseActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
+        initData();
     }
 
     protected abstract int layoutId();

@@ -1,13 +1,10 @@
 package com.njrhzn.ew.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.njrhzn.ew.R;
 
@@ -25,7 +22,7 @@ public class EntryToOrderActivity extends Activity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.img_btn_order:
-                Intent intent = new Intent(EntryToOrderActivity.this,SelectPaymentMethodActivity.class);
+                Intent intent = new Intent(EntryToOrderActivity.this,ProductListActivity.class);
                 EntryToOrderActivity.this.startActivity(intent);
                 break;
         }

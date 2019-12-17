@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.ThanksActivity"></activity>
+        <activity android:name=".Activity.ProductListActivity"></activity>
+        <activity android:name=".Activity.ThanksActivity" />
         <activity android:name=".Activity.PayedSuccessfulActivity" />
         <activity android:name=".Activity.SelectPaymentMethodActivity" />
         <activity android:name=".Activity.EntryToOrderActivity">
@@ -30,7 +31,7 @@
         <activity android:name=".Activity.Equipment_sales_statisticsActivity" />
         <activity android:name=".Activity.EquipmentConfigurationActivity" />
         <activity android:name=".Activity.AdminMenuActivity" />
-        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.LoginActivity"></activity>
         <activity android:name=".Activity.MainActivity" />
     </application>
 

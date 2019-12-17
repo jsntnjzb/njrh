@@ -1,6 +1,5 @@
 package com.njrhzn.ew.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -66,9 +65,8 @@ public class EquipmentConfigurationActivity extends MySwipeBackActivity implemen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.img_btn_back:
-                 finishActivity();
-                 Intent intent = new Intent(EquipmentConfigurationActivity.this, AdminMenuActivity.class);
-                 EquipmentConfigurationActivity.this.startActivity(intent);
+                super.finish();
+                finishActivity();
                 break;
         }
     }
