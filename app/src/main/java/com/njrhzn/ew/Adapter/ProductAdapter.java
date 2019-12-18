@@ -16,7 +16,6 @@ import com.njrhzn.ew.Model.Product;
 import com.njrhzn.ew.R;
 
 import java.lang.ref.WeakReference;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter {

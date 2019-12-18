@@ -1,4 +1,4 @@
-package com.njrh.ew.Utils;
+package com.njrhzn.ew.Utils;
 
 import android.util.Log;
 

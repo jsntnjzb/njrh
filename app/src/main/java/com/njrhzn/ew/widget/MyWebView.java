@@ -1,4 +1,4 @@
-package com.njrh.ew.widget;
+package com.njrhzn.ew.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

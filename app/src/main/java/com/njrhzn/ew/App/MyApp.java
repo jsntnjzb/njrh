@@ -1,4 +1,4 @@
-package com.njrh.ew.App;
+package com.njrhzn.ew.App;
 
 import android.app.Application;
 import android.content.Context;
@@ -11,6 +11,15 @@ public class MyApp extends Application {
      */
     public String equipmentId = "";
 
+    /**
+     * 网络是否连接
+     */
+    public boolean isConnected = false;
+
+    /**
+     * 是否是Wi-Fi连接
+     */
+    public boolean isWifi = false;
 
 
     @Override
@@ -23,7 +32,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         myApp=this;
-//        PreferencesUtil.initPrefs(this);
+
     }
 
     //获取单例
@@ -38,5 +47,10 @@ public class MyApp extends Application {
 
     public void clear(){
 
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
     }
 }

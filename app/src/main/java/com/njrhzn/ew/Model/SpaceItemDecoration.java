@@ -8,6 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * RecyclerView item 分割线类
+ * create by ChuHui 2019/12/17
+ * */
 public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
     private int leftRight;
     private int topBottom;

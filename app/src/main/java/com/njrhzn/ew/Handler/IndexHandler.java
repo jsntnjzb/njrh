@@ -5,7 +5,7 @@ import android.text.TextUtils;
 
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.CallBackFunction;
-import com.njrh.ew.Utils.ToastUtils;
+import com.njrhzn.ew.Utils.ToastUtils;
 
 import java.lang.ref.WeakReference;
 

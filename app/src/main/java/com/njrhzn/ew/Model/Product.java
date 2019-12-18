@@ -2,6 +2,10 @@ package com.njrhzn.ew.Model;
 
 import java.math.BigDecimal;
 
+/**
+ * 商品实体类
+ * create by ChuHui 2019/12/17
+ * */
 public class Product {
     /**
      * 商品名称

@@ -7,4 +7,6 @@
     <color name="dropdownlist_bg">#008577</color>
     <color name="dropdownButton">#FA9E19</color>
     <color name="default_dropdown_bg_color">#ffffff</color>
+    <!-- 应用启动页(StartingWindow)的theme的背景色 -->
+    <color name="startingwindow_bgcolor">#00bfff</color>
 </resources>

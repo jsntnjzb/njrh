@@ -2,7 +2,6 @@ package com.njrhzn.ew.Activity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.widget.ListView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
